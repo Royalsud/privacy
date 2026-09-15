@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Shared stylesheet for every policy page in this repo.
+   Dark, mobile-first, no frameworks, no fonts to download, no tracking.
+   Edit once here and every app page updates.
+   ========================================================================== */
+
+:root {
+  --bg:        #0e0d12;   /* page ground */
+  --panel:     #17161e;   /* cards / callouts */
+  --panel-2:   #1f1d28;   /* hover */
+  --line:      #2c2a38;   /* hairlines */
+  --text:      #e9e6f0;   /* body copy */
+  --muted:     #9d98ad;   /* secondary copy */
+  --accent:    #e8a33d;   /* ember gold */
+  --accent-dk: #b9761f;
+  --good:      #57c98b;
+}
+
+/* Light mode for anyone whose device asks for it (Play reviewers included). */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f6fa; --panel: #ffffff; --panel-2: #f0eef5; --line: #ddd9e6;
+    --text: #1b1a21; --muted: #5f5b6d; --accent: #a86a10; --accent-dk: #8a5408;
+    --good: #1c8a52;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+}
+
+/* One column, comfortable reading measure, safe gutters on a phone. */
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 18px 72px;
+}
+
+/* --- header ------------------------------------------------------------- */
+
+header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 28px; }
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(24px, 6vw, 34px);
+  line-height: 1.15;
+  margin: 0 0 10px;
+  letter-spacing: -.01em;
+}
+
+.sub { color: var(--muted); margin: 0; font-size: 15px; }
+
+.dates { color: var(--muted); font-size: 13.5px; margin: 14px 0 0; }
+
+/* --- body --------------------------------------------------------------- */
+
+h2 {
+  font-size: 18px;
+  margin: 34px 0 10px;
+  padding-top: 4px;
+  letter-spacing: -.005em;
+}
+
+h2 .num { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 8px; }
+
+p, li { color: var(--text); }
+
+ul { padding-left: 22px; margin: 10px 0; }
+li { margin: 6px 0; }
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-dk); }
+a:hover { color: var(--text); }
+
+strong { color: var(--text); font-weight: 650; }
+
+code {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 6px;
+  font-size: 13.5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  /* long package names must wrap, never widen the page on a phone */
+  overflow-wrap: anywhere;
+}
+
+/* --- the summary box at the top of each policy --------------------------- */
+
+.summary {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 0 0 8px;
+}
+
+.summary p { margin: 0; font-size: 16.5px; }
+
+/* Short "we do NOT do X" grid — the part a reviewer actually reads. */
+.nots { list-style: none; padding: 0; margin: 18px 0 0; }
+.nots li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--muted);
+  margin: 7px 0;
+}
+.nots li::before {
+  content: "✕";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  color: var(--good);
+  font-weight: 700;
+}
+.nots li b { color: var(--text); font-weight: 600; }
+
+/* --- app cards on the index page ---------------------------------------- */
+
+.cards { display: grid; gap: 12px; margin: 22px 0 0; }
+
+.card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);   /* cancel the global link underline */
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.card:hover { background: var(--panel-2); border-color: var(--accent-dk); transform: translateY(-1px); }
+
+.card h3 { margin: 0 0 4px; font-size: 17px; color: var(--text); }
+.card p  { margin: 0; font-size: 14px; color: var(--muted); }
+.card .pkg {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+
+/* --- contact + footer --------------------------------------------------- */
+
+.contact {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-top: 12px;
+}
+.contact p { margin: 0 0 6px; }
+.contact p:last-child { margin-bottom: 0; }
+
+footer {
+  margin-top: 46px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13.5px;
+}
+footer a { color: var(--muted); border-bottom-color: var(--line); }

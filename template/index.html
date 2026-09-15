@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- =========================================================================
+     TEMPLATE — copy this whole folder to start a new app's policy:
+
+         cp -r template my-next-app
+
+     Then replace every placeholder below:
+         {{APP_NAME}}      e.g. Shadow Dungeon 3D
+         {{PACKAGE_ID}}    e.g. com.sudip.mynextapp
+         {{TAGLINE}}       one line describing the app
+         {{DATE}}          e.g. 15 September 2026
+         {{SUPPORT_EMAIL}} the contact address to publish
+
+     Finally add a card for it in ../index.html.
+     As written, this template says the app collects nothing — that is only
+     true if the app has no ads, no analytics and no network calls. If it does,
+     uncomment section 4b at the bottom and fill it in, and make sure the Play
+     Console "Data safety" form matches.
+     ========================================================================= -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — {{APP_NAME}}</title>
+<meta name="description" content="Privacy policy for {{APP_NAME}} ({{PACKAGE_ID}}).">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>{{APP_NAME}}</h1>
+    <p class="sub">{{TAGLINE}}</p>
+    <p class="dates">
+      Package: <code>{{PACKAGE_ID}}</code><br>
+      Developer: Sudip Mondal<br>
+      Effective date: {{DATE}} &nbsp;·&nbsp; Last updated: {{DATE}}
+    </p>
+  </header>
+
+  <div class="summary">
+    <p><strong>{{APP_NAME}} does not collect, store, or share any personal data.</strong>
+    The app runs entirely on your device, with no accounts, no ads and no analytics.</p>
+  </div>
+
+  <ul class="nots">
+    <li>No <b>personal information</b> is requested or collected</li>
+    <li>No <b>advertising</b> and no advertising identifiers</li>
+    <li>No <b>analytics, tracking or crash reporting</b></li>
+    <li>No <b>accounts or sign-in</b></li>
+    <li>No <b>third-party SDKs</b> of any kind</li>
+  </ul>
+
+  <h2><span class="num">1.</span>Information we collect</h2>
+  <p>None. {{APP_NAME}} does not ask for, collect, or transmit any personal or sensitive
+  information. It does not access your name, email address, phone number, contacts, calendar,
+  location, photos, files, camera, microphone, or any advertising or device identifier.</p>
+
+  <h2><span class="num">2.</span>Information stored on your device</h2>
+  <p>The app saves your progress and settings in its own private storage area on your device.
+  This data never leaves your device and is permanently deleted when you uninstall the app or
+  clear its storage from Android Settings.</p>
+
+  <h2><span class="num">3.</span>Permissions</h2>
+  <p>{{APP_NAME}} requests no Android permissions.</p>
+
+  <h2><span class="num">4.</span>Third parties</h2>
+  <p>The app contains no advertising networks, no analytics services, no crash reporting and no
+  third-party software development kits. Because no data is collected, no data is shared, sold or
+  disclosed to anyone.</p>
+
+  <!-- ====================================================================
+       4b. UNCOMMENT THIS if the app ships AdMob / Firebase / any SDK.
+            Also delete the "no third-party SDKs" line from the list above,
+            change the summary box, and update Play's Data safety form.
+
+  <h2><span class="num">4b.</span>Services used by this app</h2>
+  <p>This app uses the following third-party services, which may collect information as described
+  in their own privacy policies:</p>
+  <ul>
+    <li><strong>Google AdMob</strong> — shows advertising and may use your device's advertising ID to
+      limit repeated ads and measure performance.
+      <a href="https://policies.google.com/technologies/ads">Google advertising policy</a>.
+      You can reset or delete your advertising ID in Android Settings → Privacy → Ads.</li>
+    <li><strong>Google Analytics for Firebase</strong> — anonymous usage statistics such as sessions and
+      screen views, used to improve the app.
+      <a href="https://firebase.google.com/support/privacy">Firebase privacy</a>.</li>
+    <li><strong>Firebase Crashlytics</strong> — crash reports containing device model, OS version and the
+      technical state of the app at the moment it crashed.</li>
+  </ul>
+  ==================================================================== -->
+
+  <h2><span class="num">5.</span>Children's privacy</h2>
+  <p>The app collects no data from any user, including children under 13 (or the equivalent
+  minimum age in your country).</p>
+
+  <h2><span class="num">6.</span>Your rights</h2>
+  <p>Privacy laws such as the GDPR and the CCPA give you the right to access, correct, export or
+  delete the personal data a developer holds about you. We hold none. The data stored on your own
+  device is removed completely when you uninstall the app.</p>
+
+  <h2><span class="num">7.</span>Changes to this policy</h2>
+  <p>If a future version of the app adds a feature that handles data, this policy will be updated
+  before that version is released and the “Last updated” date above will change.</p>
+
+  <h2><span class="num">8.</span>Contact</h2>
+  <div class="contact">
+    <p>Questions about this policy or about the app:</p>
+    <p><strong><a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a></strong></p>
+  </div>
+
+  <footer>
+    <p><a href="../">← All privacy policies by this developer</a></p>
+    <p>© 2026 Sudip Mondal. This page is the official privacy policy for {{APP_NAME}}
+    (<code>{{PACKAGE_ID}}</code>) on Google Play.</p>
+  </footer>
+
+</div>
+</body>
+</html>
